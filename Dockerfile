@@ -11,6 +11,8 @@ WORKDIR /app
 # Copy package manifests and install production + dev deps
 COPY package.json package-lock.json* yarn.lock* pnpm-lock.yaml* ./
 
+
+
 RUN \
     if [ -f yarn.lock ]; then yarn install --frozen-lockfile; \
     elif [ -f pnpm-lock.yaml ]; then npm install -g pnpm && pnpm install --frozen-lockfile; \
