@@ -1,8 +1,8 @@
 # Service Walkthrough
 Service Name: akhil-service
-Platform: aws(ECS Fargate)
+Platform: knative
 Dockerfile: Dockerfile
 Stages: dev
-Cluster: dev-cluster
+Cluster: dev-service-cluster
 # OR for Java
-BuildCommand: mvn clean package -DskipTests
+#BuildCommand: mvn clean package -DskipTests
